@@ -1,8 +1,12 @@
 # Secure Python Password Vault
 
-![Vault Dashboard](Screenshot.png)
+
 
 A high-security desktop password manager featuring AES-256 GCM authenticated encryption, Argon2id key derivation, and a local SQLite backend. This project provides a secure, local-only alternative to cloud-based password managers.
+
+<p align="center">
+  <img src="screenshot.png" alt="Vault Dashboard" width="600">
+</p>
 
 ## Features
 * **Authenticated Encryption:** Uses AES-256 in Galois/Counter Mode (GCM) to ensure data confidentiality and integrity.
