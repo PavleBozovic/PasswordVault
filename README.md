@@ -15,7 +15,7 @@ A high-security desktop password manager featuring AES-256 GCM authenticated enc
 * **Security UX:** Includes automatic clipboard clearing (30 seconds) and master password session gating.
 
 ## Tech Stack
-* **Language:** Python 3.x
+* **Language:** Python 3.14
 * **GUI:** Tkinter
 * **Database:** SQLite
 * **Cryptography:** cryptography and argon2-cffi libraries
