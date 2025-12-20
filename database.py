@@ -26,3 +26,13 @@ def add_entry(service, user, encrypted_dict):
         ''', (service, user, encrypted_dict['ciphertext'], 
               encrypted_dict['nonce'], encrypted_dict['salt']))
         conn.commit()
+
+def delete_entry(entry_id):
+    """Removes a specific credential row by its ID."""
+    with sqlite3.connect("vault.db") as conn:
+        cursor = conn.cursor()
+        # We use the 'id' because it's unique and safer than deleting by name
+        cursor.execute("DELETE FROM credentials WHERE id = ?", (entry_id,))
+        conn.commit()
+        print(f"Entry {entry_id} deleted successfully.")    
+    
