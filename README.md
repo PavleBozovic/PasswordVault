@@ -5,7 +5,7 @@
 A high-security desktop password manager featuring AES-256 GCM authenticated encryption, Argon2id key derivation, and a local SQLite backend. This project provides a secure, local-only alternative to cloud-based password managers.
 
 <p align="center">
-  <img src="screenshot.png" alt="Vault Dashboard" width="600">
+  <img src="Screenshot.png" alt="Vault Dashboard" width="600">
 </p>
 
 ## Features
