@@ -46,12 +46,12 @@ Ensure you have Python 3.x installed on your system.
    cd PasswordVault
 2. **Set up a Virtual Environment and Install Dependencies:**
 
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
-```
+  ```bash
+  python -m venv venv
+  .\venv\Scripts\activate
+  pip install -r requirements.txt
+  ```
 3. **Run the Application:**
 
-```bash
-python main.py
+  ```bash
+  python main.py
