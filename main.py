@@ -3,6 +3,8 @@ from tkinter import ttk, messagebox
 import sqlite3
 import secrets
 import string
+import ctypes
+import win32clipboard
 from crypto_logic import encrypt_data, decrypt_data
 from database import init_db, add_entry, delete_entry
 
@@ -113,8 +115,26 @@ class VaultDashboard:
             if raw_password:
                 self.root.clipboard_clear()
                 self.root.clipboard_append(raw_password)
-                messagebox.showinfo("Copied", f"Password for {service_name} is now in clipboard.")
-                self.root.after(30000, lambda: self.root.clipboard_clear())
+                messagebox.showinfo("Copied", f"Password for {service_name} is now in clipboard.")  
+
+                self.root.after(30000, self.secure_clear_clipboard)
+                
+    def secure_clear_clipboard(self):
+        """Advanced clear to bypass Windows Clipboard History ($Win + V)"""
+        try:
+            self.root.clipboard_clear()
+        
+            win32clipboard.OpenClipboard()
+            win32clipboard.EmptyClipboard()
+            win32clipboard.CloseClipboard()
+            
+            ctypes.windll.user32.OpenClipboard(None)
+            ctypes.windll.user32.EmptyClipboard()
+            ctypes.windll.user32.CloseClipboard()
+            
+            print("DEBUG: Clipboard and History wiped.")
+        except Exception as e:
+            print(f"DEBUG: Secure wipe failed: {e}")
 
     def handle_delete(self):
         """Fetches the selected name and calls the database delete function."""
