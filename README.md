@@ -42,7 +42,7 @@ Ensure you have Python 3.x installed on your system.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/PavleBozovic/PasswordVault.git](https://github.com/PavleBozovic/PasswordVault.git)
+   git clone https://github.com/PavleBozovic/PasswordVault.git
    cd PasswordVault
 2. **Set up a Virtual Environment and Install Dependencies:**
 
