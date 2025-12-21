@@ -1,8 +1,12 @@
 # Secure Python Password Vault
 
-![Vault Dashboard](screenshot.png)
+
 
 A high-security desktop password manager featuring AES-256 GCM authenticated encryption, Argon2id key derivation, and a local SQLite backend. This project provides a secure, local-only alternative to cloud-based password managers.
+
+<p align="center">
+  <img src="Screenshot.png" alt="Vault Dashboard" width="600">
+</p>
 
 ## Features
 * **Authenticated Encryption:** Uses AES-256 in Galois/Counter Mode (GCM) to ensure data confidentiality and integrity.
@@ -11,7 +15,7 @@ A high-security desktop password manager featuring AES-256 GCM authenticated enc
 * **Security UX:** Includes automatic clipboard clearing (30 seconds) and master password session gating.
 
 ## Tech Stack
-* **Language:** Python 3.x
+* **Language:** Python 3.14
 * **GUI:** Tkinter
 * **Database:** SQLite
 * **Cryptography:** cryptography and argon2-cffi libraries
@@ -42,12 +46,11 @@ Ensure you have Python 3.x installed on your system.
    cd PasswordVault
 2. **Set up a Virtual Environment and Install Dependencies:**
 
-```bash
-python -m venv venv
-.\venv\Scripts\activate
-pip install -r requirements.txt
-```
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate
+    pip install -r requirements.txt
 3. **Run the Application:**
 
-```bash
-python main.py
+    ```bash
+    python main.py
