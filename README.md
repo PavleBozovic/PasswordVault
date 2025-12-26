@@ -2,7 +2,7 @@
 
 
 
-A high-security desktop password manager featuring AES-256 GCM authenticated encryption, Argon2id key derivation, and a local SQLite backend. This project provides a secure, local-only alternative to cloud-based password managers.
+A high security desktop password manager featuring AES-256 GCM authenticated encryption, Argon2id key derivation, and a local SQLite backend. This project provides a secure, local-only alternative to cloud-based password managers.
 
 <p align="center">
   <img src="Screenshot.png" alt="Vault Dashboard" width="600">
@@ -10,8 +10,8 @@ A high-security desktop password manager featuring AES-256 GCM authenticated enc
 
 ## Features
 * **Authenticated Encryption:** Uses AES-256 in Galois/Counter Mode (GCM) to ensure data confidentiality and integrity.
-* **Brute-Force Resistance:** Implements Argon2id for high-security key derivation from a Master Password.
-* **Zero-Knowledge Architecture:** Data is encrypted locally; no plain-text passwords ever touch the disk or a network.
+* **Brute Force Resistance:** Implements Argon2id for high security key derivation from a Master Password.
+* **Zero Knowledge Architecture:** Data is encrypted locally; no plain text passwords ever touch the disk or a network.
 * **Security UX:** Includes automatic clipboard clearing (30 seconds) and master password session gating.
 
 ## Tech Stack
@@ -25,7 +25,7 @@ A high-security desktop password manager featuring AES-256 GCM authenticated enc
 ## Security Implementation
 This project prioritizes modern cryptographic standards to protect user data:
 
-* **Key Derivation (Argon2id):** Rather than using raw passwords, keys are derived using Argon2id. It is a memory-hard function specifically designed to resist GPU-based brute-force and rainbow table attacks.
+* **Key Derivation (Argon2id):** Rather than using raw passwords, keys are derived using Argon2id. It is a memory hard function specifically designed to resist GPU based brute force and rainbow table attacks.
 * **Encryption (AES-256 GCM):** The application utilizes AES-GCM to provide Authenticated Encryption. This allows the system to detect if the database file has been tampered with or corrupted before attempting decryption.
 
 
